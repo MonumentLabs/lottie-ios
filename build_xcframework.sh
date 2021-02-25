@@ -1,10 +1,11 @@
 #!/bin/sh
 # Taken from https://medium.com/@er.mayursharma14/how-to-create-xcframework-855817f854cf
 
-PROJECT_DIR="/Volumes/Data/work/projects/freelance/MonumentLabs/temp/task2232/Lottie/lottie-ios"
+PROJECT_DIR=$(dirname "$0")
 PROJECT_NAME="Lottie"
 TARGET="Lottie_iOS"
 SCHEME="$TARGET"
+echo $PROJECT_DIR
 
 # set framework folder name
 FRAMEWORK_FOLDER_NAME="${PROJECT_NAME}"

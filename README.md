@@ -78,6 +78,15 @@ let package = Package(
 ```
 And then import wherever needed: ```import Lottie```
 
+To update version of binary:
+1. In Terminal set current directory to project's folder and run script 'build_xcframework.sh'
+2. You can find built framework in 'build' directory. Compress it to zip.
+3. In terminal run `swift package compute-checksum {PATH_TO_ZIP} and update checksum in Package.swift
+4. Update `tag` variable in Package.swift file to something like 'x.x.x-binary'
+5. Push changes into 'SPM-binary' branch
+6. Add tag for the new commit exactly the same as you added in Package.swift file.
+6. Make a new release on github for tagged commit.
+
 #### Adding it to an existent iOS Project via Swift Package Manager
 
 1. Using Xcode 11 go to File > Swift Packages > Add Package Dependency
